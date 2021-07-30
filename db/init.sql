@@ -2,7 +2,7 @@ CREATE DATABASE citiesData;
 use citiesData;
 
 CREATE TABLE IF NOT EXISTS tblCitiesImport (
-    `CityName` VARCHAR(21) CHARACTER SET utf8,
+    `cityName` VARCHAR(21) CHARACTER SET utf8,
     `lng` NUMERIC(7, 4),
     `lat` NUMERIC(6, 4),
     `country` VARCHAR(19) CHARACTER SET utf8,
