@@ -1,21 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="card" class="m-5 p-2">
-    <h5 class="card-title">{{ city.cityName }} - {{ city.Abbreviation }}</h5>
+<div class="card m-5 p-2">
+    <h5 class="card-title">{{ res.GameNumber }} - {{ res.GameLength }}</h5>
 
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">lat: {{ city.lat }}</li>
-        <li class="list-group-item">lng: {{ city.lng }}</li>
-        <li class="list-group-item">capital: {{ city.capital }}</li>
-        <li class="list-group-item">country: {{ city.country }}</li>
-        <li class="list-group-item">population: {{ city.population }}</li>
+        <li class="list-group-item">Game Number: {{ res.GameNumber }}</li>
+        <li class="list-group-item">Game Length: {{ res.GameLength }}</li>
     </ul>
     <div class="card-body">
-        <a href="/edit/{{city.id}}" class="card-link btn btn-primary">edit</a>
+        <a href="/edit/{{res.GameNumber}}" class="card-link btn btn-primary">Edit</a>
     </div>
 </div>
-<form action="/delete/{{city.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+<form action="/delete/{{res.GameNumber}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
 
 
 {% endblock %}

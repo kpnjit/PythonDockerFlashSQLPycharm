@@ -3,25 +3,15 @@
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">cityName</th>
-        <th scope="col">lat</th>
-        <th scope="col">lng</th>
-        <th scope="col">country</th>
-        <th scope="col">Abbreviation</th>
-        <th scope="col">capital</th>
-        <th scope="col">population</th>
+        <th scope="col">Game Number</th>
+        <th scope="col">Game Length</th>
     </tr>
     </thead>
     <tbody>
-    {% for city in cities %}
+    {% for res in results %}
     <tr>
-        <td><a href="view/{{city.id}}">{{ city.cityName }}</a></td>
-        <td>{{ city.lat }}</td>
-        <td>{{ city.lng }}</td>
-        <td>{{ city.country }}</td>
-        <td>{{ city.Abbreviation }}</td>
-        <td>{{ city.capital }}</td>
-        <td>{{ city.population }}</td>
+        <td><a href="view/{{res.GameNumber}}">{{ res.GameNumber }}</a></td>
+        <td>{{ res.GameLength }}</td>
     </tr>
     {% endfor %}
     </tbody>

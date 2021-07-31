@@ -1,45 +1,19 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/cities/new" method="POST">
+<form action="/results/new" method="POST">
     <div class="row">
         <div class="col">
-            <label for="cityName">City Name</label>
-            <input id="cityName" type="text" class="form-control" placeholder="cityName" name="cityName">
+            <label for="GameNumber">Game Number</label>
+            <input id="GameNumber" type="text" class="form-control" placeholder="Game Number" name="GameNumber">
         </div>
         <div class="col">
-            <label for="Abbreviation">City Abbreviation</label>
-            <input id="Abbreviation" t ype="text" class="form-control" placeholder="Abbreviation"
-                   name="Abbreviation">
-        </div>
-        <div class="col">
-            <label for="country">City Country</label>
-            <input id="country" type="text" class="form-control" placeholder="country" name="country">
+            <label for="GameLength">Game Length</label>
+            <input id="GameLength" type="text" class="form-control" placeholder="Game Length" name="GameLength">
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <label for="lat">City Latitude</label>
-            <input id="lat" type="text" class="form-control" placeholder="lat" name="lat">
-        </div>
-        <div class="col">
-            <label for="lng">City Longitude</label>
-            <input id="lng" type="text" class="form-control" placeholder="lng" name="lng">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label for="capital">Capital Status</label>
 
-            <input id="capital" type="text" class="form-control" placeholder="capital"
-                   name="capital">
-        </div>
-        <div class="col">
-            <label for="population">City Population</label>
-            <input id="population" type="text" class="form-control" placeholder="population" name="population">
-        </div>
-    </div>
-    <button type="submit" class="btn btn-success">Create</button>
+    <button type="submit" class="btn btn-success">Success</button>
 
 </form>
 

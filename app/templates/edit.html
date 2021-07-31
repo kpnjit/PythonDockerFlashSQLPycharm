@@ -1,45 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/edit/{{city.id}}" method="post">
+<form action="/edit/{{res.GameNumber}}" method="POST">
     <div class="row">
         <div class="col">
-            <label for="cityName">cityName</label>
-            <input id="cityName" type="text" class="form-control" placeholder="cityName" name="cityName" value="{{city.cityName}}">
+            <label for="GameNumber">Game Number</label>
+            <input id="GameNumber" type="number" class="form-control" placeholder="Game Number" name="GameNumber" value="{{res.GameNumber}}">
         </div>
         <div class="col">
-            <label for="Abbreviation">Abbreviation</label>
-            <input id="Abbreviation" type="text" class="form-control" placeholder="Abbreviation"
-                   name="Abbreviation" value="{{city.Abbreviation}}">
-        </div>
-        <div class="col">
-            <label for="country">country</label>
-            <input id="country" type="text" class="form-control" placeholder="country" name="fldCountry" value="{{city.country}}">
+            <label for="GameLength">Game Length</label>
+            <input id="GameLength" type="number" class="form-control" placeholder="Game Length" name="GameLength" value="{{res.GameLength}}">
         </div>
     </div>
-
-    <div class="row">
-        <div class="col">
-            <label for="lat">lat</label>
-            <input id="lat" type="text" class="form-control" placeholder="lat" name="lat" value="{{city.lat}}">
-        </div>
-        <div class="col">
-            <label for="lng">lng</label>
-            <input id="lng" type="text" class="form-control" placeholder="lng" name="lng" value="{{city.lng}}">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label for="capital">capital</label>
-
-            <input id="capital" type="text" class="form-control" placeholder="capital"
-                   name="capital" value="{{city.capital}}">
-        </div>
-        <div class="col">
-            <label for="population">population</label>
-            <input id="population" type="text" class="form-control" placeholder="population" name="population" value="{{city.population}}">
-        </div>
-    </div>
-    <button type="submit" class="btn btn-success">Save</button>
-
+    <button type="submit" class="btn btn-success">Save Edit</button>
 </form>
 {% endblock %}
