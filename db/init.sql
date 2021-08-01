@@ -1,18 +1,11 @@
-CREATE DATABASE Snakes_Ladders;
+CREATE DATABASE awardData;
+use awardData;
 
-use Snakes_Ladders;
-
-CREATE TABLE IF NOT EXISTS tblsnldImport
-(`GameNumber` int AUTO_INCREMENT not null ,`GameLength` NUMERIC(5), PRIMARY KEY (`GameNumber`));
-
-INSERT INTO tblsnldImport (GameNumber, GameLength) VALUES
-    (1,30),
-    (2,29),
-    (3,31),
-    (4,16),
-    (5,24),
-    (6,29),
-    (7,28),
-    (8,117),
-    (9,42),
-    (10,23);
+CREATE TABLE IF NOT EXISTS oscarAgeMale (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `year` INT,
+    `age` INT,
+    `name` VARCHAR(22) ,
+    `movie` VARCHAR(43) ,
+    PRIMARY KEY (`id`)
+);

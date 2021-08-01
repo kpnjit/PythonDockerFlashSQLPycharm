@@ -1,18 +1,20 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="card m-5 p-2">
-    <h5 class="card-title">{{ res.GameNumber }} - {{ res.GameLength }}</h5>
-
+<div class="card" class="m-5 p-2">
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">Game Number: {{ res.GameNumber }}</li>
-        <li class="list-group-item">Game Length: {{ res.GameLength }}</li>
+        <li class="list-group-item">ID: {{ award.id }}</li>
+        <li class="list-group-item">Year: {{ award.year }}</li>
+        <li class="list-group-item">Age: {{ award.age }}</li>
+        <li class="list-group-item">Name: {{ award.name }}</li>
+        <li class="list-group-item">Movie: {{ award.movie }}</li>
     </ul>
     <div class="card-body">
-        <a href="/edit/{{res.GameNumber}}" class="card-link btn btn-primary">Edit</a>
+        <a href="/edit/{{award.id}}" class="card-link btn btn-primary">edit</a>
+        <form action="/delete/{{award.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
     </div>
 </div>
-<form action="/delete/{{res.GameNumber}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+
 
 
 {% endblock %}
